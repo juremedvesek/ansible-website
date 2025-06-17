@@ -1,0 +1,6 @@
+---
+- hosts: all
+  sudo: true
+  task:
+    - debug: print something
+
