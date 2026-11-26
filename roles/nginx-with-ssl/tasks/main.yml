@@ -76,5 +76,5 @@
     name: nginx
     state: restarted
   when:
-    - dhparams is changed or nginx_config is changed or nginx_server is changed
-    - nginx_started is not changed
+    - dhparams is changed or {{ nginx_config }} is changed or {{ nginx_server }} is changed
+    - nginx_started is 'not changed'
